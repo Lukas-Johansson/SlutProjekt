@@ -9,7 +9,7 @@ public class clients {
     public ObjectInputStream clientIn;
 
     public int port = 12345;
-    public String ip = "127.0.0.1";
+    public String ip = " 10.80.47.168";
 
     public clients(){
         try {

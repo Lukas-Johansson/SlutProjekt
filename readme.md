@@ -14,3 +14,7 @@ Spelet handlar om att man ska sätta ut 10 olika händelser på en tidslinje.
 - Komma på en bra sätt att visa och placera saker på tidslinjen.
 - Skapa en server och klient för att man ska kunna spela mot varandra.
 - Skapa korten och de olika varianterna kommer finnas olika kategorier.
+
+##Vecka21
+
+Äntligen efter att inte ha varit sjuk sen starten så har jag varit på en lektion väldigt episkt. Har laggt till de saker som jag har jobbat med och fixat lite server och client saker så den borde fungera att sicka information imellan dem.
