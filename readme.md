@@ -17,4 +17,7 @@ Spelet handlar om att man ska sätta ut 10 olika händelser på en tidslinje.
 
 ##Vecka21
 
+###Torsdag 
 Äntligen efter att inte ha varit sjuk sen starten så har jag varit på en lektion väldigt episkt. Har laggt till de saker som jag har jobbat med och fixat lite server och client saker så den borde fungera att sicka information imellan dem.
+###Fredag
+Har problem med servern och klienten den låter mig inte sicka scores emellan och den dör efteråt. Annars så verkar saker funka okej viewn är fortfarande levande men resten verkar mörkt.

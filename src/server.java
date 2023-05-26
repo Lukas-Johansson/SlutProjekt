@@ -2,12 +2,12 @@ import java.io.*;
 import java.net.*;
 
 public class server {
-    public String host = "localhost";
-    public int port = 12345;
-    public ServerSocket server;
-    public Socket clients;
-    public ObjectOutputStream serverOut;
-    public ObjectInputStream serverIn;
+    private String host = "localhost";
+    private int port = 28758;
+    private ServerSocket server;
+    private Socket client;
+    private ObjectOutputStream serverOut;
+    private ObjectInputStream serverIn;
 
     public server() {
         try {
@@ -21,8 +21,8 @@ public class server {
 
     public void acceptClients(){
         try {
-            clients = server.accept();
-            System.out.println(InetAddress.getByName(host));
+            client = server.accept();
+            System.out.println(client.getInetAddress());
         } catch (IOException e){
             System.err.println("Server: Did not accept clients!");
             e.printStackTrace();
@@ -32,8 +32,8 @@ public class server {
 
     public void getStreams(){
         try {
-            serverOut = new ObjectOutputStream(clients.getOutputStream());
-            serverIn = new ObjectInputStream(clients.getInputStream());
+            serverOut = new ObjectOutputStream(client.getOutputStream());
+            serverIn = new ObjectInputStream(client.getInputStream());
         } catch (IOException e){
             System.err.println("Server: Did not get clients streams!");
             e.printStackTrace();
@@ -52,14 +52,33 @@ public class server {
         }
         System.out.println("Server: Kunde skicka msg ...");
     }
-    public void msg(){
+
+    public int[] receiveScore() {
         try {
-            String msgIn = (String) serverIn.readObject();
-            System.out.println(msgIn);
-        } catch (IOException | ClassNotFoundException e){
-            System.err.println("");
+            int[] scores = new int[2];
+            scores[0] = serverIn.readInt();
+            scores[1] = serverIn.readInt();
+            return scores;
+        } catch (IOException e) {
+            System.err.println("Server: Failed to receive scores!");
+            e.printStackTrace();
+            return new int[]{0, 0};
+        }
+    }
+
+    public void close() {
+        try {
+            if (serverIn != null)
+                serverIn.close();
+            if (serverOut != null)
+                serverOut.close();
+            if (client != null)
+                client.close();
+            if (server != null)
+                server.close();
+        } catch (IOException e) {
+            System.err.println("Server: Error closing connections!");
             e.printStackTrace();
         }
-        System.out.println("");
     }
 }
