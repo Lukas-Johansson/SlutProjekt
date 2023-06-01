@@ -21,3 +21,8 @@ Spelet handlar om att man ska sätta ut 10 olika händelser på en tidslinje.
 Äntligen efter att inte ha varit sjuk sen starten så har jag varit på en lektion väldigt episkt. Har laggt till de saker som jag har jobbat med och fixat lite server och client saker så den borde fungera att sicka information imellan dem.
 ###Fredag
 Har problem med servern och klienten den låter mig inte sicka scores emellan och den dör efteråt. Annars så verkar saker funka okej viewn är fortfarande levande men resten verkar mörkt.
+
+## Vecka 22 
+
+###Torsdag
+Har fixat guin och kopplat allt till den hade problem att få spelet att fungera eftersom frågorna gick ur index 0?. Aja det fungerar som ett frågespel och man kan spela den.
