@@ -1,21 +1,29 @@
-public class Question {
-    private String question;
-    private String answer;
+import java.io.Serializable;
 
-    public Question(String question, String answer) {
-        this.question = question;
-        this.answer = answer;
+public class Question implements Serializable {
+    private String questionText;
+    private String correctAnswer;
+    private int points;
+
+    public Question(String questionText, String correctAnswer, int points) {
+        this.questionText = questionText;
+        this.correctAnswer = correctAnswer;
+        this.points = points;
     }
 
-    public String getQuestion() {
-        return question;
+    public String getQuestionText() {
+        return questionText;
     }
 
-    public String getAnswer() {
-        return answer;
+    public String getCorrectAnswer() {
+        return correctAnswer;
     }
 
-    public boolean isCorrectAnswer(String userAnswer) {
-        return answer.equalsIgnoreCase(userAnswer);
+    public int getPoints() {
+        return points;
+    }
+
+    public boolean isCorrect(String answer) {
+        return correctAnswer.equalsIgnoreCase(answer);
     }
 }
