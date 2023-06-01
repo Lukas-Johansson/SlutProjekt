@@ -22,7 +22,7 @@ public class ServerModel {
         questions.add(new Question("Vad hände 2005?", "Du det kan man undra", 15));
         questions.add(new Question("Vilket år dog jesus ?", "Typ 0, vilket är lite coolt", 25));
         questions.add(new Question("Är curry baserat eller inte?", "Amen det beror på om man har smaklökar eller inte om man har det så är det gott", 15000));
-        questions.add(new Question("Which country won the FIFA World Cup in 2018?", "France", 15));
+        questions.add(new Question("Vilken är snyggare?", "Jag", 15));
     }
 
     public Question getNextQuestion() {
