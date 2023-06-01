@@ -15,10 +15,6 @@ public class Question implements Serializable {
         return questionText;
     }
 
-    public String getCorrectAnswer() {
-        return correctAnswer;
-    }
-
     public int getPoints() {
         return points;
     }

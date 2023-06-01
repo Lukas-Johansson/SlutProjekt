@@ -28,6 +28,7 @@ public class ClientView {
         scoreLabel = new JLabel("Score: 0");
         frame.add(scoreLabel, BorderLayout.NORTH);
 
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
@@ -57,16 +58,5 @@ public class ClientView {
     public void setAnswerListener(ActionListener listener) {
         this.answerListener = listener;
         inputTextField.addActionListener(answerListener);
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            ClientView clientView = new ClientView();
-            // Example usage:
-            clientView.showMessage("Welcome to the game!");
-            clientView.displayQuestion(new Question("What is the capital of France?", "Paris", 10));
-            clientView.displayScore(20);
-            clientView.displayFinalScore(100);
-        });
     }
 }
