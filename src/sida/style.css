@@ -1,0 +1,19 @@
+body {
+        display: block;
+        width: 100%;
+        text-align: center;
+        }
+
+        .flex-container {
+        display: table;
+        margin-right: auto;
+        margin-left: auto;
+        }
+
+        .bild {
+        size: 10rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        width: 100%;
+        height: 100%;
+}
