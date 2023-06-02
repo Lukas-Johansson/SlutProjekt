@@ -98,7 +98,7 @@ public class ClientController {
 
     public static void main(String[] args) {
         String ip = "localhost";
-        int port = 12345;
+        int port = 12346;
         ClientModel clientModel = new ClientModel();
         ClientView clientView = new ClientView();
         ClientController clientController = new ClientController(clientModel, clientView);

@@ -128,7 +128,7 @@ public class ServerController {
     }
 
     public static void main(String[] args) {
-        int port = 12345;
+        int port = 12346;
 
         ServerController serverController = new ServerController(port);
         serverController.start();
